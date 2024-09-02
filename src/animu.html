@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Problem 4</title>
+  <title>Problem 2</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -25,6 +25,12 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
     input[type="text"] {
       padding: 10px;
       margin-top: 20px;
@@ -42,7 +48,7 @@
 <body>
   <div class="container">
     <h1>애니뮤 미궁</h1>
-    <p>네번째 문제의 답은???</p>
+    <img src="../img/problem2.png" />
     <input type="text" id="userInput" class="form-control" placeholder="Enter your answer">
     <button class="btn btn-primary mt-3" onclick="checkAnswer()">정답 확인</button>
     <p id="error" class="error">정답이 아닙니다.</p>
@@ -66,10 +72,10 @@
 
     function checkAnswer() {
       const answer = document.getElementById('userInput').value;
-      const correctAnswer = "4";
+      const correctAnswer = "map";
 
       if (compareAnswer(answer, correctAnswer)) {
-        window.location.href = "final.html"; // Redirect to the next problem
+        window.location.href = "map.html"; // Redirect to the next problem
       } else {
         document.getElementById('error').style.display = 'block';
       }

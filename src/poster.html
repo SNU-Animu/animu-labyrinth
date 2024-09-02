@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final</title>
+  <title>Problem 4</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -47,11 +47,11 @@
 
 <body>
   <div class="container">
-    <h1>축하합니다!</h1>
-    <h3><a href="https://forms.gle/uAqWCm5y8ac2uTTW7">가입 링크</a></h3>
-    <p>
-      혹시 문제를 더 풀고 싶다면... <a href="https://www.thelabyrinth.co.kr/labyrinth/">(더보기)</a>
-    </p>
+    <h1>애니뮤 미궁</h1>
+    <img src="../img/problem4.png" />
+    <input type="text" id="userInput" class="form-control" placeholder="Enter your answer">
+    <button class="btn btn-primary mt-3" onclick="checkAnswer()">정답 확인</button>
+    <p id="error" class="error">정답이 아닙니다.</p>
   </div>
 
   <!-- Bootstrap JS and dependencies (Optional if you need JS components) -->
@@ -72,10 +72,10 @@
 
     function checkAnswer() {
       const answer = document.getElementById('userInput').value;
-      const correctAnswer = "4";
+      const correctAnswer = "코미코토";
 
       if (compareAnswer(answer, correctAnswer)) {
-        window.location.href = "final.html"; // Redirect to the next problem
+        window.location.href = "comicoto.html"; // Redirect to the next problem
       } else {
         document.getElementById('error').style.display = 'block';
       }
